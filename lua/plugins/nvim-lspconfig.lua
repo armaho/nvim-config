@@ -1,0 +1,28 @@
+return {
+  "neovim/nvim-lspconfig",
+  dependencies = {
+    'saghen/blink.cmp',
+    {
+      "folke/lazydev.nvim",
+      ft = "lua",
+      opts = {
+        library = {
+          {
+            path = "${3rd}/luv/library",
+            words = { "vim%.uv" }
+          },
+        },
+      },
+    },
+  },
+  config = function()
+    vim.lsp.enable('lua_ls')
+
+    vim.lsp.enable('gopls')
+
+    vim.lsp.config('clangd', { cmd = { 'clangd', '--header-insertion=never' } })
+    vim.lsp.enable('clangd')
+
+    vim.lsp.enable('bash-language-server');
+  end
+}
