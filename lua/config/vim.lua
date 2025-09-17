@@ -15,7 +15,7 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
-vim.o.shell = "/usr/bin/zsh"
+vim.o.shell = os.getenv("SHELL")
 
 vim.keymap.set('t', '<C-[><C-[>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
