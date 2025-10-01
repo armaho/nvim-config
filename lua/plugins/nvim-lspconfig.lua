@@ -23,6 +23,6 @@ return {
     vim.lsp.config('clangd', { cmd = { 'clangd', '--header-insertion=never' } })
     vim.lsp.enable('clangd')
 
-    vim.lsp.enable('bash-language-server');
+    vim.lsp.enable('ts_ls');
   end
 }
