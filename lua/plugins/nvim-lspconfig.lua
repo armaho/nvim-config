@@ -26,5 +26,10 @@ return {
     vim.lsp.enable('ts_ls');
 
     vim.lsp.enable('pyright');
+
+    vim.lsp.enable('cssls')
+    vim.lsp.enable('html')
+    vim.lsp.enable('jsonls')
+    vim.lsp.enable('marksman')
   end
 }
